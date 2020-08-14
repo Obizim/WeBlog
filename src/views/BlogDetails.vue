@@ -5,10 +5,10 @@
 
     <p class="comment">Comments:</p>
     <section>
-      <div>
+      <div style="background: #eee">
         <div class="comments" v-for="(comment, index) in comments" :key="index">
-          <h3 v-rainbow>{{ comment.email }}</h3>
-          <article v-rainbow>{{ comment.body | reduce }}</article>
+          <h3>{{ comment.email }}</h3>
+          <article>{{ comment.body | reduce }}</article>
         </div>
       </div>
       <form>
@@ -100,6 +100,7 @@ section {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  background: #eee;
 }
 
 .comments {
@@ -109,10 +110,17 @@ section {
   margin: 20px;
   align-items: flex-start;
   justify-content: center;
+  background: #eee;
 
   h3 {
     font-size: 1rem;
     margin: 10px 0;
+    background: transparent;
+    color: #000;
+  }
+  article{
+    background: transparent;
+    color: #000
   }
 }
 
@@ -121,17 +129,24 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  background: #eee;
 
   h3 {
     margin-bottom: 20px;
+    background: transparent;
+    color: #000;
   }
-
+label{
+  background: transparent;
+  color: #000;
+}
   input {
-    border: 1px solid #fff;
+    border: 1px solid rgb(0, 0, 0);
     height: 30px;
     width: 250px;
     margin-top: 10px;
     padding: 5px;
+    background: transparent;
   }
   button {
     border: none;
